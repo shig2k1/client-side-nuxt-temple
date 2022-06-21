@@ -17,10 +17,14 @@ export default ({ command }) => {
 		  resolve: {
 			  alias: {
           ...devOnlyResolve,
+					fs: 'rollup-plugin-node-builtins',
+					buffer: 'buffer',
+					path: 'path',
+					process: { env: {} },
 				  // polyfills
 					//'lodash': './vendor/lodash.min.js',
-				  'readable-stream': 'vite-compatible-readable-stream',
-	        stream: 'vite-compatible-readable-stream',
+				  'readable-stream': 'stream',
+	        stream: 'stream',
 			  },
 		  },
 		  // ... 
